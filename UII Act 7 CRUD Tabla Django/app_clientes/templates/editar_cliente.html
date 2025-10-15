@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Cliente Subway</title>
+</head>
+<body>
+    <h1>Editar Cliente: {{ cliente.nombre }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="{{ cliente.nombre }}" required maxlength="50">
+        <br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" value="{{ cliente.telefono }}" required maxlength="10">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ cliente.email }}" required maxlength="100">
+        <br>
+        <label for="sandwich_favorito">Sandwich Favorito:</label>
+        <input type="text" id="sandwich_favorito" name="sandwich_favorito" value="{{ cliente.sandwich_favorito }}" maxlength="100">
+        <br>
+        <button type="submit">Actualizar Cliente</button>
+    </form>
+    <a href="{% url 'inicio' %}">Cancelar</a>
+</body>
+</html>

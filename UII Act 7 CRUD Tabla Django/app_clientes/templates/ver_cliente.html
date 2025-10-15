@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ver Cliente Subway</title>
+</head>
+<body>
+    <h1>Detalles del Cliente</h1>
+    <p><strong>Nombre:</strong> {{ cliente.nombre }}</p>
+    <p><strong>Teléfono:</strong> {{ cliente.telefono }}</p>
+    <p><strong>Email:</strong> {{ cliente.email }}</p>
+    <p><strong>Sandwich Favorito:</strong> {{ cliente.sandwich_favorito }}</p>
+    <p><strong>ID:</strong> {{ cliente.id }}</p>
+    
+    <a href="{% url 'inicio' %}">Volver a la lista</a>
+</body>
+</html>
